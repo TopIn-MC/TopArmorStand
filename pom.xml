@@ -5,17 +5,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>me.hsgamer.topin</groupId>
-  <artifactId>ExampleAddon</artifactId>
+  <artifactId>TopArmorStand</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ExampleAddon</name>
+  <name>TopArmorStand</name>
 
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.mainAddonClass>me.hsgamer.topin.exampleaddon.MainAddon</project.mainAddonClass>
-    <project.mainPluginClass>me.hsgamer.topin.exampleaddon.MainPlugin</project.mainPluginClass>
+    <project.mainAddonClass>me.hsgamer.topin.armorstand.ArmorStandAddon</project.mainAddonClass>
   </properties>
 
   <build>
