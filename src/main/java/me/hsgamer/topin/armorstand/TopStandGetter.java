@@ -1,4 +1,4 @@
-package me.hsgamer.topin.armorstand.getter;
+package me.hsgamer.topin.armorstand;
 
 import static me.hsgamer.topin.TopIn.getInstance;
 

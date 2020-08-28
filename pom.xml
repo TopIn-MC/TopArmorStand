@@ -40,6 +40,12 @@
             </goals>
             <configuration>
               <createDependencyReducedPom>false</createDependencyReducedPom>
+              <relocations>
+                <relocation>
+                  <pattern>me.hsgamer.hscore.request</pattern>
+                  <shadedPattern>me.hsgamer.topin.armorstand.lib.request</shadedPattern>
+                </relocation>
+              </relocations>
             </configuration>
           </execution>
         </executions>
@@ -84,6 +90,11 @@
       <artifactId>TopIn</artifactId>
       <version>1.2</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>me.HSGamer</groupId>
+      <artifactId>HSCore-request</artifactId>
+      <version>1.3</version>
     </dependency>
   </dependencies>
 </project>
