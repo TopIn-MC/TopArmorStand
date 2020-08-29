@@ -2,7 +2,6 @@ package me.hsgamer.topin.armorstand;
 
 import static me.hsgamer.topin.TopIn.getInstance;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -35,7 +34,7 @@ public class TopStandGetter implements Getter {
   @Override
   public void register() {
     ConfigurationSerialization.registerClass(TopStand.class);
-    armorStandConfig = new PluginConfig(getInstance(), new File("armorstand.yml"));
+    armorStandConfig = new PluginConfig(getInstance(), "armorstand.yml");
     armorStandConfig.getConfig().options().copyDefaults(true);
     UPDATE_PERIOD.setConfig(armorStandConfig);
     armorStandConfig.saveConfig();
