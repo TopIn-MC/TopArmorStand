@@ -39,6 +39,7 @@ public class TopStand implements ConfigurationSerializable {
     }
 
     ArmorStand armorStand = (ArmorStand) entity;
+    armorStand.setSilent(true);
     ItemStack itemStack = armorStand.getHelmet();
     if (itemStack == null) {
       return;
@@ -63,6 +64,7 @@ public class TopStand implements ConfigurationSerializable {
     OfflinePlayer topPlayer = Bukkit.getOfflinePlayer(dataList.getPair(index).getUniqueId());
     SkullUtils.setOwner((SkullMeta) itemMeta, topPlayer);
     itemStack.setItemMeta(itemMeta);
+    armorStand.setHelmet(itemStack);
   }
 
   public UUID getUniqueId() {
