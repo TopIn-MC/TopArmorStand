@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 
 public class ArmorStandListener implements Listener {
 
@@ -33,9 +34,14 @@ public class ArmorStandListener implements Listener {
 
   @EventHandler
   public void onBlockDamage(EntityDamageEvent event) {
-    Entity entity = event.getEntity();
-    event.setCancelled(
-        entity instanceof ArmorStand && getter.containsArmorStand(entity.getUniqueId()));
+    event.setCancelled(getter.containsArmorStand(event.getEntity().getUniqueId()));
+  }
+
+  @EventHandler
+  public void onInteract(PlayerInteractEntityEvent event) {
+    if (!event.getPlayer().hasPermission(ArmorStandPermissions.ARMOR_STAND)) {
+      event.setCancelled(getter.containsArmorStand(event.getRightClicked().getUniqueId()));
+    }
   }
 
   @EventHandler
