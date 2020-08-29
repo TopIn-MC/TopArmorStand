@@ -31,6 +31,7 @@ public class ArmorStandListener implements Listener {
   public void onChat(AsyncPlayerChatEvent event) {
     if (event.getMessage().equalsIgnoreCase("cancel") && requestManager
         .contains(event.getPlayer().getUniqueId())) {
+      requestManager.remove(event.getPlayer().getUniqueId());
       MessageUtils.sendMessage(event.getPlayer(), "&aCancelled");
     }
   }
