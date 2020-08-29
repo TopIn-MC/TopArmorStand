@@ -23,6 +23,7 @@ public class ArmorStandListener implements Listener {
     Entity entity = event.getEntity();
     UUID uuid = event.getDamager().getUniqueId();
     if (entity instanceof ArmorStand && requestManager.contains(uuid)) {
+      event.setCancelled(true);
       requestManager.apply(uuid, (ArmorStand) entity);
     }
   }
@@ -31,6 +32,7 @@ public class ArmorStandListener implements Listener {
   public void onChat(AsyncPlayerChatEvent event) {
     if (event.getMessage().equalsIgnoreCase("cancel") && requestManager
         .contains(event.getPlayer().getUniqueId())) {
+      event.setCancelled(true);
       requestManager.remove(event.getPlayer().getUniqueId());
       MessageUtils.sendMessage(event.getPlayer(), "&aCancelled");
     }
