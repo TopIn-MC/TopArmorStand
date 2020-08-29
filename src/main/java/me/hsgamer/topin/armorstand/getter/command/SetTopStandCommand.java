@@ -1,4 +1,4 @@
-package me.hsgamer.topin.armorstand.command;
+package me.hsgamer.topin.armorstand.getter.command;
 
 import static me.hsgamer.topin.utils.MessageUtils.sendMessage;
 
@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.List;
 import me.hsgamer.topin.TopIn;
 import me.hsgamer.topin.armorstand.ArmorStandPermissions;
-import me.hsgamer.topin.armorstand.TopStand;
-import me.hsgamer.topin.armorstand.TopStandGetter;
+import me.hsgamer.topin.armorstand.getter.TopStand;
+import me.hsgamer.topin.armorstand.getter.TopStandGetter;
 import me.hsgamer.topin.config.MessageConfig;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;

@@ -1,7 +1,8 @@
-package me.hsgamer.topin.armorstand;
+package me.hsgamer.topin.armorstand.getter;
 
 import java.util.UUID;
 import me.hsgamer.hscore.request.ConsumerRequestManager;
+import me.hsgamer.topin.armorstand.ArmorStandPermissions;
 import me.hsgamer.topin.utils.MessageUtils;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;

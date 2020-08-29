@@ -1,4 +1,4 @@
-package me.hsgamer.topin.armorstand;
+package me.hsgamer.topin.armorstand.getter;
 
 import static me.hsgamer.topin.TopIn.getInstance;
 
@@ -7,8 +7,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 import me.hsgamer.hscore.request.ConsumerRequestManager;
-import me.hsgamer.topin.armorstand.command.RemoveTopStandCommand;
-import me.hsgamer.topin.armorstand.command.SetTopStandCommand;
+import me.hsgamer.topin.armorstand.getter.command.RemoveTopStandCommand;
+import me.hsgamer.topin.armorstand.getter.command.SetTopStandCommand;
 import me.hsgamer.topin.core.config.PluginConfig;
 import me.hsgamer.topin.core.config.path.IntegerConfigPath;
 import me.hsgamer.topin.getter.Getter;
