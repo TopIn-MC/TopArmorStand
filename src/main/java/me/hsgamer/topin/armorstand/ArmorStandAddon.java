@@ -4,15 +4,9 @@ import static me.hsgamer.topin.TopIn.getInstance;
 
 import java.util.UUID;
 import me.hsgamer.topin.addon.object.Addon;
-import me.hsgamer.topin.core.config.path.StringConfigPath;
 import org.bukkit.Bukkit;
 
 public final class ArmorStandAddon extends Addon {
-
-  public static final StringConfigPath ARMOR_STAND_REMOVED = new StringConfigPath(
-      "armor-stand-removed", "&aThe armor stand is removed");
-  public static final StringConfigPath ARMOR_STAND_REQUIRED = new StringConfigPath(
-      "armor-stand-required", "&cAn armor stand is required");
 
   private TopStandGetter topStandGetter;
 
@@ -33,10 +27,6 @@ public final class ArmorStandAddon extends Addon {
   public void onEnable() {
     topStandGetter = new TopStandGetter();
     getInstance().getGetterManager().register(topStandGetter);
-
-    ARMOR_STAND_REMOVED.setConfig(getInstance().getMessageConfig());
-    ARMOR_STAND_REQUIRED.setConfig(getInstance().getMessageConfig());
-    getInstance().getMessageConfig().saveConfig();
   }
 
   @Override
