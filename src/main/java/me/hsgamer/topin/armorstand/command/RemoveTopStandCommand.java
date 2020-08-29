@@ -15,8 +15,8 @@ public class RemoveTopStandCommand extends BukkitCommand {
   private final TopStandGetter getter;
 
   public RemoveTopStandCommand(TopStandGetter getter) {
-    super("settopstand", "Set the armor stand for top players", "/settopstand <data_list> <index>",
-        Collections.singletonList("topstand"));
+    super("removetopstand", "Remove the top armor stand", "/removetopstand",
+        Collections.emptyList());
     this.getter = getter;
   }
 
