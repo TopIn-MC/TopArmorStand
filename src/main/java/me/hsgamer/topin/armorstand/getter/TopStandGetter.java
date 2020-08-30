@@ -71,7 +71,7 @@ public class TopStandGetter implements Getter {
     }
   }
 
-  private void saveArmorStand() {
+  public void saveArmorStand() {
     FileConfiguration config = armorStandConfig.getConfig();
     config.set("data", topStandList);
     armorStandConfig.saveConfig();

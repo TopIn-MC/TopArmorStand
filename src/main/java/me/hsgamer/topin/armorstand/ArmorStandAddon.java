@@ -34,4 +34,9 @@ public final class ArmorStandAddon extends Addon {
   public void onDisable() {
     getInstance().getGetterManager().unregister(topStandGetter);
   }
+
+  @Override
+  public void onReload() {
+    topStandGetter.saveArmorStand();
+  }
 }
