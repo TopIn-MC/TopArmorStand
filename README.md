@@ -1,5 +1,8 @@
 # TopArmorStand
 Top Armor Stands for TopIn
+## Install
+- You can either install as an plugin
+- Or install it in the `addon` folder of TopIn
 ## Setup
 1. Place an armor stand with a head as its helmet
 2. Type `/settopstand <datalist> <index>`
