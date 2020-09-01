@@ -12,9 +12,6 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
 public class TopStand implements ConfigurationSerializable {
 
@@ -44,15 +41,7 @@ public class TopStand implements ConfigurationSerializable {
     if (!alreadySilent) {
       armorStand.setSilent(true);
     }
-    ItemStack itemStack = armorStand.getHelmet();
-    if (itemStack == null) {
-      return;
-    }
 
-    ItemMeta itemMeta = itemStack.getItemMeta();
-    if (!(itemMeta instanceof SkullMeta)) {
-      return;
-    }
 
     Optional<DataList> optionalDataList = TopIn.getInstance().getDataListManager()
         .getDataList(dataListName);
@@ -66,10 +55,8 @@ public class TopStand implements ConfigurationSerializable {
     }
 
     OfflinePlayer topPlayer = Bukkit.getOfflinePlayer(dataList.getPair(index).getUniqueId());
-    SkullUtils.setOwner((SkullMeta) itemMeta, topPlayer);
+    SkullUtils.setSkullOnArmorStand(armorStand, topPlayer);
 
-    itemStack.setItemMeta(itemMeta);
-    armorStand.setHelmet(itemStack);
     if (!alreadySilent) {
       armorStand.setSilent(false);
     }
